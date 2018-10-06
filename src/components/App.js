@@ -37,8 +37,10 @@ const Navigation = () => (
 
 const Home = () => (
   <div className="home">
-    <h1> </h1>
-    <p> Welcome to ez-claim! Please choose the following service.</p>
+    <img
+      width="800"
+      src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/43235551_2196410690682238_5096892747348967424_o.jpg?_nc_cat=106&oh=25bda75e21065c505f40a2d4390fb2a0&oe=5C172F81"
+    />
   </div>
 );
 

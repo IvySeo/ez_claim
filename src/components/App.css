@@ -8,6 +8,7 @@ html {
   box-sizing: inherit;
   padding: 0;
   margin: 0;
+  background-color: #4183bf;
 }
 
 .app {
@@ -19,7 +20,7 @@ html {
 nav ul {
   list-style: none;
   display: flex;
-  background-color: #3cbef1;
+  /*background-color: #3cbef1;*/
   margin-bottom: 20px;
 }
 
@@ -30,10 +31,6 @@ nav ul li {
 nav ul li a {
   color: black;
   text-decoration: none;
-}
-
-.current {
-  border-bottom: 4px solid #1da3b4;
 }
 
 h1 {
