@@ -22,8 +22,13 @@ const Navigation = () => (
         </NavLink>
       </li>
       <li>
-        <NavLink exact activeClassName="current" to="/app/contact">
+        <NavLink exact activeClassName="current" to="/app/AboutUs">
           About us
+        </NavLink>
+      </li>
+      <li>
+        <NavLink exact activeClassName="current" to="/app/ContactUs">
+          Contact Us
         </NavLink>
       </li>
     </ul>
@@ -44,8 +49,8 @@ const Claim = () => (
   </div>
 );
 
-const Contact = () => (
-  <div className="contact">
+const AboutUs = () => (
+  <div className="AboutUs">
     <br />
     <br />
     <h4>Ez-Claim, Inc.</h4>
@@ -67,6 +72,11 @@ const Contact = () => (
       in addition to making the claims process work better for everyone.
     </p>
     <br />
+  </div>
+);
+
+const ContactUs = () => (
+  <div className="ContactUs">
     <h4>Contact us</h4>
     <p>
       email: support@ezclaim.com <br />
@@ -100,7 +110,8 @@ const Main = () => (
   <Switch>
     <Route exact path="/app" component={Home} />
     <Route exact path="/app/claim" component={Claim} />
-    <Route exact path="/app/contact" component={Contact} />
+    <Route exact path="/app/aboutus" component={AboutUs} />
+    <Route exact path="/app/contactus" component={ContactUs} />
   </Switch>
 );
 
