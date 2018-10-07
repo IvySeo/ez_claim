@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./NoteForm.css";
 import Modal from "react-modal";
+import { Button } from "react-bootstrap";
+
 Modal.setAppElement("#root");
 const customStyles = {
   content: {
@@ -18,7 +20,8 @@ class NoteForm extends Component {
     this.state = {
       newNoteContent: "",
       newNotePrice: "",
-      modalIsOpen: false
+      modalIsOpen: false,
+      selectedFile: null
     };
     this.handlePriceInput = this.handlePriceInput.bind(this);
     this.handleUserInput = this.handleUserInput.bind(this);
@@ -53,15 +56,26 @@ class NoteForm extends Component {
     });
   }
 
+  fileSelectHandler = event => {
+    this.setState({
+      selectedFile: event.target.files[0]
+    });
+  };
+
   writeNote() {
     // call a method that sets the noteContent for a note to
     // the value of the input
-    this.props.addNote(this.state.newNoteContent, this.state.newNotePrice);
+    this.props.addNote(
+      this.state.newNoteContent,
+      this.state.newNotePrice,
+      this.state.selectedFile
+    );
 
     // Set newNoteContent back to an empty string.
     this.setState({
       newNoteContent: "",
-      newNotePrice: ""
+      newNotePrice: "",
+      selectedFile: null
     });
     window.location.reload();
   }
@@ -102,6 +116,11 @@ class NoteForm extends Component {
               value={this.state.newNotePrice}
               onChange={this.handlePriceInput}
             />
+            <br />
+            <div>
+              <input type="file" onChange={this.fileSelectHandler} />
+              <button onClick={this.fileUploadHandler}>Upload</button>
+            </div>
             <br />
             <button className="noteButton" onClick={this.writeNote}>
               Add Asset

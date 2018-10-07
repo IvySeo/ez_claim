@@ -9,6 +9,7 @@ import NoteForm from "../NoteForm/NoteForm";
 import Chat from "./chat";
 import chat_styles from "./../Config/chatstyles";
 import { ThemeProvider } from "styled-components";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -77,6 +78,7 @@ class Home extends Component {
   constructor(props) {
     super(props);
   }
+
   render() {
     return (
       <div className="MainPage">
@@ -122,7 +124,8 @@ class Claim extends Component {
     // We're going to setup the React state of our component
     this.state = {
       notes: [],
-      hasTriggered: true
+      hasTriggered: true,
+      theURL: ""
     };
   }
 
@@ -132,24 +135,6 @@ class Claim extends Component {
       url: URL.createObjectURL(e.target.files[0])
     });
   }
-
-  // componentDidMount() {
-  //   const ref = database.ref().child(this.state.user.uid);
-  //   ref.on("child_added", child => {
-  //     let images = this.state.images.slice();
-  //     images.push({
-  //       key: child.key,
-  //       url: child.val().url
-  //     });
-  //     this.setState({ images });
-  //   });
-  //   ref.on("child_removed", child => {
-  //     let images = this.state.images.filter(image => {
-  //       return image.url != child.val().url;
-  //     });
-  //     this.setState({ images });
-  //   });
-  // }
 
   componentWillMount() {
     const previousNotes = this.state.notes;
@@ -180,7 +165,7 @@ class Claim extends Component {
     });
   }
 
-  addNote(note, price) {
+  addNote(note, price, file) {
     this.database.push().set({ noteContent: note, notePrice: price });
   }
 
@@ -222,13 +207,6 @@ class Claim extends Component {
 
 const Contact = () => (
   <div className="contact">
-    <p>
-      <img
-        src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/43303767_2196908543965786_406983056495214592_n.jpg?_nc_cat=100&oh=3c34c41f420ae640b96da56ca3e70bf8&oe=5C1572E8"
-        width="150"
-      />
-    </p>
-
     <br />
     <br />
     <h4>Ez-Claim, Inc.</h4>
@@ -239,17 +217,15 @@ const Contact = () => (
     <br />
     <h4>Description</h4>
     <p>
-      EZ-Claim, Inc. is a risk management company that Tenants/Home owners
-      manage <br />
+      EZ-Claim, Inc. is a risk management company Tenants/Home owners manage
       their risk issues effectively and ensure the claim process is very smooth
-      <br />
       during thier recovery period.
     </p>
     <br />
     <h4>Mission Statement</h4>
     <p>
-      We want to help consumers as well as the insurance providers with <br />
-      claims in addition to making the claims process work better for everyone.
+      We want to help consumers as well as the insurance providers with claims
+      in addition to making the claims process work better for everyone.
     </p>
     <br />
     <h4>Contact us</h4>
