@@ -9,7 +9,12 @@ html {
   padding: 0;
   margin: 0;
 }
-
+.MainPage {
+  margin: auto;
+  text-align: center;
+  width: 80%;
+  padding: 10px;
+}
 .app {
   width: 960px;
   margin: 0 auto;
@@ -19,17 +24,27 @@ html {
 nav ul {
   list-style: none;
   display: flex;
-  background-color: #4183bf;
+  background-color: black;
   margin-bottom: 20px;
+  margin: auto;
+  text-align: center;
+}
+.logoSpace {
+  margin: 10;
+  margin-left: 50;
 }
 
 nav ul li {
-  padding: 20px;
+  padding: 10px;
+  margin: auto;
+  text-align: center;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
+  margin: auto;
+  text-align: center;
 }
 
 .current {

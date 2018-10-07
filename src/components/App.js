@@ -77,9 +77,29 @@ class Home extends Component {
   constructor(props) {
     super(props);
   }
-
   render() {
-    return <div />;
+    return (
+      <div className="MainPage">
+        <img
+          src="https://i2-prod.mirror.co.uk/incoming/article9690664.ece/ALTERNATES/s615/Happy-family-walk.jpg"
+          width="750"
+        />
+        <font face="Arial Black" size="15">
+          <br />
+          <br />
+          Ez-Claims Inc.
+        </font>
+
+        <font face="Courier">
+          <br />
+          <br />
+          <br />
+          We want to help consumers as well as the insurance providers with
+          claims <br />
+          in addition to making the claims process work better for everyone.
+        </font>
+      </div>
+    );
   }
 }
 
@@ -202,6 +222,13 @@ class Claim extends Component {
 
 const Contact = () => (
   <div className="contact">
+    <p>
+      <img
+        src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/43303767_2196908543965786_406983056495214592_n.jpg?_nc_cat=100&oh=3c34c41f420ae640b96da56ca3e70bf8&oe=5C1572E8"
+        width="150"
+      />
+    </p>
+
     <br />
     <br />
     <h4>Ez-Claim, Inc.</h4>
@@ -212,15 +239,17 @@ const Contact = () => (
     <br />
     <h4>Description</h4>
     <p>
-      EZ-Claim, Inc. is a risk management company Tenants/Home owners manage
+      EZ-Claim, Inc. is a risk management company that Tenants/Home owners
+      manage <br />
       their risk issues effectively and ensure the claim process is very smooth
+      <br />
       during thier recovery period.
     </p>
     <br />
     <h4>Mission Statement</h4>
     <p>
-      We want to help consumers as well as the insurance providers with claims
-      in addition to making the claims process work better for everyone.
+      We want to help consumers as well as the insurance providers with <br />
+      claims in addition to making the claims process work better for everyone.
     </p>
     <br />
     <h4>Contact us</h4>
