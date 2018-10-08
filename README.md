@@ -20,6 +20,7 @@ Functions:
 
 2) Claim service
 :Data is stored in firebase
+
 Get a list of assets ready for claim process
 
 
