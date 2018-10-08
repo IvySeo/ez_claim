@@ -7,7 +7,7 @@ Our solution to this problem was to utilize a cloud storage database to store as
 Followed the classic SDLC using agile methodologies. 
 We used Trello for planning and delegating tasks within our group and split development.
 
-Used ReactJS as our libary to make our front end and NodeJS for our backend and firebase for our database. 
+Used ReactJS as our library to make our front end and NodeJS for our backend and firebase for our database. 
 
 Won the 1st place for the HACKUIOWA BIG DATA hackathon hosted at university of Iowa and sponsored by 3M.
 
