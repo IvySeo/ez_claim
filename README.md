@@ -19,9 +19,7 @@ Functions:
 1) Live chat
 
 2) Claim service
-:Data is stored in firebase
-
-Get a list of assets ready for claim process
+:Data is stored in firebase / Get a list of assets ready for claim process
 
 
 
@@ -35,6 +33,7 @@ The data is directly sent to firebase
 command:
 npm install
 npm start
+
 
 
 
